@@ -1,0 +1,9 @@
+Endpoint: /todos
+- task must be a non-empty string
+- done must be a boolean
+
+Endpoint: /todos/{id}
+- id must be a positive integer and not null
+- task must be a non-empty string
+- done must be a boolean
+- depends on /todos id

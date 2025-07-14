@@ -1,0 +1,57 @@
+openapi: 3.0.0
+info:
+  title: To‑Do API
+  version: 1.0.0
+
+paths:
+  /todos:
+    post:
+      summary: Create a To‑Do item
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                task:
+                  type: string
+                done:
+                  type: boolean
+      responses:
+        '200':
+          description: Item created
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                  task:
+                    type: string
+                  done:
+                    type: boolean
+
+  /todos/{id}:
+    get:
+      summary: Get a To‑Do item
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Item retrieved
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                  task:
+                    type: string
+                  done:
+                    type: boolean

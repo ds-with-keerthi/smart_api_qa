@@ -1,0 +1,47 @@
+openapi: 3.0.0
+info:
+  title: Minimal Sample API
+  version: 1.0.0
+
+paths:
+  /users:
+    post:
+      summary: Create a user
+      responses:
+        '200':
+          description: User created
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                  name:
+                    type: string
+
+  /users/{id}:
+    get:
+      summary: Get user by ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: User found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                  name:
+                    type: string
+                  parentId:
+                    type: integer
+                  childId:
+                    type: integer

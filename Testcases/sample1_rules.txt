@@ -1,0 +1,8 @@
+Endpoint: /users
+- name must be a non-empty string
+
+Endpoint: /users/{id}
+- parentId must be a positive integer and not null
+- parentId must appear before childId
+- name must be a non-empty string
+- depends on /users id

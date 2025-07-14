@@ -1,0 +1,9 @@
+Endpoint: /posts
+- title must be a non-empty string
+- content must be a non-empty string
+
+Endpoint: /posts/{id}
+- id must be a positive integer
+- title must be a non-empty string
+- content must be a non-empty string
+- depends on /posts id
