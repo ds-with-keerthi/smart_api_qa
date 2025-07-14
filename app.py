@@ -5,7 +5,7 @@ from openapi3 import OpenAPI
 import re
 import requests
 
-OPENROUTER_API_KEY = "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"  # openroter token
+OPENROUTER_API_KEY = st.secrets["OPENROUTER_API_KEY"]  # openroter token
 
 # Simulated LLM function to generate test scripts (replace with actual LLM API call in production)
 def generate_test_script(context):
